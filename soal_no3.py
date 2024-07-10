@@ -1,22 +1,13 @@
-class AntrianRestoran:
+from modul import AntrianRestoran
 
-    antrian = []  # Atribut class untuk menyimpan data antrian
+antrian = AntrianRestoran()
 
-    def __init__(self):
-        pass
+antrian.enqueue("Nasi Goreng")
+antrian.enqueue("Mie Goreng")
+antrian.enqueue("Capcay")
 
-    def enqueue(self, pesanan):
-       
-        AntrianRestoran.antrian.append(pesanan)
-        print(f"Pesanan {pesanan} ditambahkan ke antrian.")
+antrian.dequeue()
+antrian.dequeue()
 
-    def dequeue(self):
-        
-        if not AntrianRestoran.antrian:
-            print("Antrian kosong!")
-            return None
-
-        pesanan_depan = AntrianRestoran.antrian[0]
-        AntrianRestoran.antrian.pop(0)
-        print(f"Pesanan {pesanan_depan} diproses.")
-        return pesanan_depan
+antrian.enqueue("Es Teh")
+antrian.dequeue()

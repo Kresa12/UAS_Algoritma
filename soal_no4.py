@@ -1,4 +1,4 @@
-class Parent(Buah):
+class Buah():
 
     def __init__(self, nama, warna, rasa):
         self.nama = nama
@@ -17,7 +17,7 @@ class Parent(Buah):
         print(f"Rasa: {self.rasa}")
 
 
-class Child(Parent, Mangga):
+class Mangga(Buah):
 
     def __init__(self, nama, warna, rasa, vitamin):
         super().__init__(nama, warna, rasa) 
@@ -31,8 +31,8 @@ class Child(Parent, Mangga):
         print(f"Vitamin: {self.vitamin}")
 
 
-mangga1 = Child("Mangga Gadung", "Kuning", "Manis", "Vitamin A, C, dan E")
-mangga2 = Child("Mangga Golek", "Hijau Kekuningan", "Manis Legit", "Vitamin B6 dan K")
+mangga1 = ("Mangga Gadung", "Kuning", "Manis", "Vitamin A, C, dan E")
+mangga2 = ("Mangga Golek", "Hijau Kekuningan", "Manis Legit", "Vitamin B6 dan K")
 
 mangga1.informasi()
 print("\n")
